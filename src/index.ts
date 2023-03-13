@@ -23,3 +23,10 @@ let marks: number[] = [56, 78, 96, 34]
 
 // If array is empty then data type will be "any". We should avoid it.
 let arr = []
+
+////////////////////////////////////////////////////
+
+// Tuples: - These are fixed length arrays.
+
+let details: [number, string, number, string] = [1, 'Sushant', 19, 'CSE']
+console.log(details)
