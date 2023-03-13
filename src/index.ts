@@ -14,3 +14,12 @@ let age = 19
 
 // Here we had not assined any data type and value so TS will use "any" datatype here.
 let none;
+
+
+////////////////////////////////////////////////////
+
+// Declaring Arrays
+let marks: number[] = [56, 78, 96, 34]
+
+// If array is empty then data type will be "any". We should avoid it.
+let arr = []
