@@ -94,3 +94,14 @@ let newStudent: Student = {
         console.log(`Semester: ${semester}`)
     }
 }
+
+
+// Union - When we want to pass more than one type of argument in a function
+
+function kgToPound(weight: number | string): number {
+    if (typeof weight === 'number'){
+        return weight * 2.2
+    } else {
+        return parseInt(weight) * 2.2
+    }
+}
