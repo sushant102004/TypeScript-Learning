@@ -75,3 +75,22 @@ let myDetails: {
 }
 
 myDetails.resultHistory(2)
+
+
+// Better way to create objects using type alias
+
+type Student = {
+    readonly rollNo: number,
+    name: string,
+    department: string,
+    resultHistory: (semester: number) => void
+}
+
+let newStudent: Student = {
+    rollNo: 11212534,
+    name: 'Kunal',
+    department: 'CSE',
+    resultHistory: (semester: number) => {
+        console.log(`Semester: ${semester}`)
+    }
+}
