@@ -21,5 +21,5 @@ let arr = [];
 ////////////////////////////////////////////////////
 // Tuples: - These are fixed length arrays.
 let details = [1, 'Sushant', 19, 'CSE'];
-console.log(details);
+const sushantTShirtSize = "M" /* TShirtSize.Medium */;
 //# sourceMappingURL=index.js.map

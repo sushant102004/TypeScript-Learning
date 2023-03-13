@@ -29,4 +29,14 @@ let arr = []
 // Tuples: - These are fixed length arrays.
 
 let details: [number, string, number, string] = [1, 'Sushant', 19, 'CSE']
-console.log(details)
+
+// Enum: - List of related constants
+
+const enum TShirtSize {
+    Small = 'S',
+    Medium = 'M',
+    Large = 'L',
+    XtraLarge = 'XL'
+}
+
+const sushantTShirtSize: TShirtSize = TShirtSize.Medium
