@@ -40,3 +40,17 @@ const enum TShirtSize {
 }
 
 const sushantTShirtSize: TShirtSize = TShirtSize.Medium
+
+////////////////////////////////////////////////////
+
+// Functions
+
+function calculateTax(income: number, taxYear = 2022): number {
+    // Tax year is now a optional parameter.
+    if (taxYear < 2023 && income < 600000) {
+        return 0
+    }
+    return income * 1.8
+}
+
+calculateTax(700_000)
