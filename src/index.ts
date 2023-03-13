@@ -54,3 +54,24 @@ function calculateTax(income: number, taxYear = 2022): number {
 }
 
 calculateTax(700_000)
+
+
+/////////////////////////////////////////////////////
+
+// Objects
+
+let myDetails: {
+    readonly rollNo: number,
+    name: string,
+    department: string,
+    resultHistory: (semester: number) => void
+} = {
+    rollNo: 11212531,
+    name: 'Sushant',
+    department: 'CSE',
+    resultHistory: (semester: number) => {
+        console.log(`Semester: ${semester}`)
+    }
+}
+
+myDetails.resultHistory(2)

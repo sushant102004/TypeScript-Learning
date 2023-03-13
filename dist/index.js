@@ -22,4 +22,14 @@ let arr = [];
 // Tuples: - These are fixed length arrays.
 let details = [1, 'Sushant', 19, 'CSE'];
 const sushantTShirtSize = "M" /* TShirtSize.Medium */;
+////////////////////////////////////////////////////
+// Functions
+function calculateTax(income, taxYear = 2022) {
+    // Tax year is now a optional parameter.
+    if (taxYear < 2023 && income < 600000) {
+        return 0;
+    }
+    return income * 1.8;
+}
+calculateTax(700000);
 //# sourceMappingURL=index.js.map
