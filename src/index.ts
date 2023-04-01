@@ -74,7 +74,7 @@ let myDetails: {
     }
 }
 
-myDetails.resultHistory(2)
+// myDetails.resultHistory(2)
 
 
 // Better way to create objects using type alias
@@ -111,9 +111,10 @@ function kgToPound(weight: number | string): number {
 // Classes
 
 class StudentClass {
-    rollNo: number
+    readonly rollNo: number
     name: string
     department: string
+    private internalMarks: number = 10
 
     constructor(rollNo: number, name: string, department: string) {
         this.rollNo = rollNo
@@ -124,7 +125,60 @@ class StudentClass {
     resultHistory(sem: number) {
         console.log(`Semester: ${sem}`)
     }
+
+    getInternalMarks() {
+        console.log(`Internal Marks: ${this.internalMarks}`)
+    }
 }
 
 const vishal = new StudentClass(11212525, 'Vishal Sharma', 'B.Tech CSE')
-console.log(vishal)
+// console.log(vishal)
+// vishal.getInternalMarks()
+
+
+// Better way to create classes and constructor function.
+
+class StudentClassBetter {
+    constructor(
+        readonly rollNo: number,
+        public name: string,
+        public department: string,
+        private internalMarks: number = 5
+    ){}
+
+    resultHistory(sem: number) {
+        console.log(`Semester: ${sem}`)
+    }
+
+    getInternalMarks() {
+        console.log(`Internal Marks: ${this.internalMarks}`)
+    }
+}
+
+const john = new StudentClassBetter(98765434, 'John', 'B.Tech CSE')
+// john.resultHistory(3) 
+
+
+/////////////////////////////////////////////////////////////////
+
+// Interface: These are used to create a structure of a object or class.
+
+interface Teacher {
+    staffId: number,
+    name: string,
+    attendance: number
+}
+
+const ramesh : Teacher = {
+    staffId : 112211,
+    name : 'Ramesh',
+    attendance : 0
+}
+
+const increaseAttendance = (teacher: Teacher) => {
+    teacher.attendance++;
+    console.log(`New Attendace: ${teacher.attendance}`)
+}
+
+// increaseAttendance(ramesh)
+// increaseAttendance(ramesh)
