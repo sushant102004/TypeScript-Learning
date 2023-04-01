@@ -182,3 +182,17 @@ const increaseAttendance = (teacher: Teacher) => {
 
 // increaseAttendance(ramesh)
 // increaseAttendance(ramesh)
+
+
+// Generics - These are used to fetch data from arguments whose type is not known.
+
+// Here <T> will examine the passed argument 'obj' and the will save it's type.
+const addDoc = <T>(obj : T) => {
+    let uid = Math.floor(Math.random() * 100)
+    return {...obj, uid}
+}
+
+const docOne = addDoc({ name : 'Sushant'})
+
+// We can now access name and uid.
+console.log(docOne.uid)
