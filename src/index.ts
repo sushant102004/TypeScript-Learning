@@ -105,3 +105,26 @@ function kgToPound(weight: number | string): number {
         return parseInt(weight) * 2.2
     }
 }
+
+///////////////////////////////////////////////////////////
+
+// Classes
+
+class StudentClass {
+    rollNo: number
+    name: string
+    department: string
+
+    constructor(rollNo: number, name: string, department: string) {
+        this.rollNo = rollNo
+        this.name = name
+        this.department = department
+    }
+
+    resultHistory(sem: number) {
+        console.log(`Semester: ${sem}`)
+    }
+}
+
+const vishal = new StudentClass(11212525, 'Vishal Sharma', 'B.Tech CSE')
+console.log(vishal)
