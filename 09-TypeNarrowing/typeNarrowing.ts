@@ -44,5 +44,14 @@ const got: TVShow = {
     numOfEpisodes: 80
 }
 
-console.log(getDuration(endGame))
-console.log(getDuration(got))
+// console.log(getDuration(endGame))
+// console.log(getDuration(got))
+
+
+function printFullDate(date: Date | string): void {
+    if (date instanceof Date) {
+        console.log(date.toUTCString())
+    } else {
+        console.log(new Date(date).toUTCString())
+    }
+}
