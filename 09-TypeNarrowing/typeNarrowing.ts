@@ -55,3 +55,18 @@ function printFullDate(date: Date | string): void {
         console.log(new Date(date).toUTCString())
     }
 }
+
+
+// Type Predicates: - It is a function that tells if a object is of specific type.
+
+function isTvShow(obj: TVShow | Movie): obj is TVShow {
+    return (obj as TVShow).numOfEpisodes !== undefined
+}
+
+function checkMedia(show: TVShow | Movie): string {
+    if (isTvShow(show)) {
+        return "This is a TV show"
+    } else {
+        return "This is a movie"
+    }
+}
