@@ -23,4 +23,4 @@ function myFunc<T = number>(): T[] {
 
 const ans = myFunc()
 
-console.log(merge({ name: 'Sushant' }, { age: 19 }))
+// console.log(merge({ name: 'Sushant' }, { age: 19 }))
